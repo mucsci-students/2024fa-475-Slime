@@ -9,36 +9,36 @@ public class ChunkTrigger : MonoBehaviour
     public JumpKing playerScript;
     [SerializeField] private AudioClip landLandSound;
     [SerializeField] private AudioClip landJumpSound;
-    [SerializeField] private AudioClip landFacePlantSound;
+    [SerializeField] private AudioClip landSplatSound;
 
     // Snow
     [SerializeField] private AudioClip snowLandSound;
     [SerializeField] private AudioClip snowJumpSound;
-    [SerializeField] private AudioClip snowFacePlantSound;
+    [SerializeField] private AudioClip snowSplatSound;
 
     // Ice
     [SerializeField] private AudioClip iceLandSound;
     [SerializeField] private AudioClip iceJumpSound;
-    [SerializeField] private AudioClip iceFacePlantSound;
+    [SerializeField] private AudioClip iceSplatSound;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "PlayerBox" && gameObject.tag == "LandChunks")
         {
             groundTriggerScript.landSound = landLandSound;
             playerScript.jumpSound = landJumpSound;
-            playerScript.facePlantSound = landFacePlantSound;
+            groundTriggerScript.splatSound = landSplatSound;
         }
         else if (other.tag == "PlayerBox" && gameObject.tag == "SnowChunks")
         {
             groundTriggerScript.landSound = snowLandSound;
             playerScript.jumpSound = snowJumpSound;
-            playerScript.facePlantSound = snowFacePlantSound;
+            groundTriggerScript.splatSound = snowSplatSound;
         }
         else if (other.tag == "PlayerBox" && gameObject.tag == "IceChunks")
         {
             groundTriggerScript.landSound = iceLandSound;
             playerScript.jumpSound = iceJumpSound;
-            playerScript.facePlantSound = iceFacePlantSound;
+            groundTriggerScript.splatSound = iceSplatSound;
         }
     }
 }

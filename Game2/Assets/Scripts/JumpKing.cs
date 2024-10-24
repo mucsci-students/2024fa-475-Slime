@@ -9,7 +9,7 @@ public class JumpKing : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float maxJumpValue = 17.5f;
     [SerializeField] private float jumpIncreaseValue = 0.025f;
-    [SerializeField] private float facePlantVelocityValue = -20f;
+    [SerializeField] private float splatVelocityValue = -20f;
     [SerializeField] private float jumpResetDelay = 0.25f;
     [SerializeField] private float horizontalDistance = 6f;
 
@@ -25,7 +25,7 @@ public class JumpKing : MonoBehaviour
     private bool canFlip = true;
     public bool isJumping = false;
     private bool isWallBouncing = false;
-    private bool isFacePlant = false;
+    public bool isSplat = false;
     private bool isFacingRight = true;
     private float jumpResetTimer;
     public float jumpValue = 0.0f;
@@ -40,8 +40,6 @@ public class JumpKing : MonoBehaviour
     // Audio
     [SerializeField] public AudioClip wallBounceSound;
     [SerializeField] public AudioClip jumpSound;
-    [SerializeField] public AudioClip facePlantSound;
-
     private bool isFalling = false;
 
     void Start()
@@ -128,7 +126,6 @@ public class JumpKing : MonoBehaviour
         // Triggers the wall bounce state
         if (isWallBouncing)
         {
-            ground.enabled = false;
             anim.SetTrigger("TriggerWallBounce");
         }
         else
@@ -136,10 +133,10 @@ public class JumpKing : MonoBehaviour
             ground.enabled = true;
         }
 
-        // Sets the facePlant boolean to true if the player is falling at high speeds
-        if (rb.velocity.y < facePlantVelocityValue)
+        // Sets the Splat boolean to true if the player is falling at high speeds
+        if (rb.velocity.y < splatVelocityValue)
         {
-            isFacePlant = true;
+            isSplat = true;
             canMove = false;
             canJump = false;
             canFlip = false;
@@ -173,8 +170,8 @@ public class JumpKing : MonoBehaviour
                     {
                         canJump = true;
                         canMove = false;
-                        anim.SetBool("isFacePlant", false);
-                        isFacePlant = false;
+                        anim.SetBool("isSplat", false);
+                        isSplat = false;
                         jumpResetTimer = 0f;
                     }
                 }
@@ -182,14 +179,14 @@ public class JumpKing : MonoBehaviour
                 if (moveInput < 0f)
                 {
                     anim.SetBool("isRunning", true);
-                    anim.SetBool("isFacePlant", false);
-                    isFacePlant = false;
+                    anim.SetBool("isSplat", false);
+                    isSplat = false;
                 }
                 else if (moveInput > 0f)
                 {
                     anim.SetBool("isRunning", true);
-                    anim.SetBool("isFacePlant", false);
-                    isFacePlant = false;
+                    anim.SetBool("isSplat", false);
+                    isSplat = false;
                 }
                 else
                 {
@@ -218,13 +215,13 @@ public class JumpKing : MonoBehaviour
             isWallBouncing = false;
             isFalling = false;
 
-            // Sets the face plant state in decreasing velocity < facePlantVelocityValue, otherwise go to idle state
-            if (isFacePlant)
+            // Sets the face plant state in decreasing velocity < SplatVelocityValue, otherwise go to idle state
+            if (isSplat)
             {
-                anim.SetBool("isFacePlant", true);
-                SoundFXManager.instance.PlaySoundFXClip(facePlantSound, transform, 0.5f);
+                anim.SetBool("isSplat", true);
                 rb.velocity = new Vector2(0.0f, 0.0f);
                 StartCoroutine(preventMovement());
+                
             }
             else 
             {
@@ -241,7 +238,7 @@ public class JumpKing : MonoBehaviour
         }
     }
 
-    // Prevents the player from moving once they are in the facePlant state for a duration of time
+    // Prevents the player from moving once they are in the Splat state for a duration of time
     private IEnumerator preventMovement()
     {
         yield return new WaitForSeconds (2f);
