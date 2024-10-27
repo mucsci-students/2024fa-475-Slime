@@ -7,7 +7,7 @@ public class TeleportSpawn : MonoBehaviour
     public GameObject player;
     public PauseMenu pauseMenu;
     public SetSpawn spawnScript;
-    //public JumpKing playerScript;
+    // public JumpKing playerScript;
     [SerializeField] private AudioClip teleportSound;
 
     public void TeleportToSpawn()
