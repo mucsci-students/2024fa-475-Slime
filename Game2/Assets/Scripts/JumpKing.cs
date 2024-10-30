@@ -75,7 +75,7 @@ public class JumpKing : MonoBehaviour
         isOnIceGround = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.5f, 0.2f), 0f, iceGroundLayer);
         isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
-        new Vector2(0.5f, 0.2f), 0f, iceSlopesLayer);
+        new Vector2(0.45f, 0.2f), 0f, iceSlopesLayer);
         anim.SetBool("isOnIce", isOnIceGround);
 
         //checks if grounded
@@ -205,7 +205,7 @@ public class JumpKing : MonoBehaviour
                     anim.SetBool("isRunning", false);
                 }
 
-                if (!(isOnIceGround && isOnIceSlopes))
+                if (!(isOnIceGround || isOnIceSlopes))
                 {
                     if (canMove && isJumping)
                     {
