@@ -49,7 +49,7 @@ public class JumpKing : MonoBehaviour
     // Ice 
     // [SerializeField] private float iceMoveInput;
     // [SerializeField] private float iceBaseSpeed;
-    [SerializeField] private float iceSpeedMax;
+    [SerializeField] private float iceSpeed;
 
 
     void Start()
@@ -73,14 +73,14 @@ public class JumpKing : MonoBehaviour
 
         //checks if on ice
         isOnIceGround = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
-        new Vector2(0.5f, 0.2f), 0f, iceGroundLayer);
+        new Vector2(0.45f, 0.2f), 0f, iceGroundLayer);
         isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.45f, 0.2f), 0f, iceSlopesLayer);
         anim.SetBool("isOnIce", isOnIceGround);
 
         //checks if grounded
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
-        new Vector2(0.5f, 0.2f), 0f, groundLayer);
+        new Vector2(0.45f, 0.2f), 0f, groundLayer);
         anim.SetBool("isGrounded", isGrounded);
 
         if (isGrounded || isFalling)
@@ -205,30 +205,31 @@ public class JumpKing : MonoBehaviour
                     anim.SetBool("isRunning", false);
                 }
 
-                if (!(isOnIceGround || isOnIceSlopes))
+                // checks if on ice
+                if (canMove && isJumping)
                 {
-                    if (canMove && isJumping)
+                    rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                    
+                }
+                else
+                {
+                    if (isOnIceGround || isOnIceSlopes)
                     {
-                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                        rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
                     }
                     else
                     {
                         rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
                     }
                 }
-                else if (isOnIceGround || isOnIceSlopes)
-                {
-                    if (canMove && isJumping)
-                    {
-                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
-                    }
-                    else
-                    {
-                        rb.AddForce(new Vector2 (moveInput * iceSpeedMax, rb.velocity.y));
-                        //rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
-                    }
-                    
-                }
+                // if (canMove && isJumping)
+                // {
+                //     rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);  
+                // }
+                // else
+                // {
+                //     rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                // }
             }   
         }
     }
@@ -248,7 +249,15 @@ public class JumpKing : MonoBehaviour
             if (isSplat)
             {
                 anim.SetBool("isSplat", true);
-                rb.velocity = new Vector2(0.0f, 0.0f);
+                if (isOnIceGround || isOnIceSlopes)
+                {
+                    rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
+                }
+                else
+                {
+                    rb.velocity = new Vector2(0.0f, 0.0f);
+                }
+                
                 StartCoroutine(preventMovement());
                 
             }
@@ -266,7 +275,6 @@ public class JumpKing : MonoBehaviour
             isWallBouncing = true;
         }
     }
-
     // Prevents the player from moving once they are in the Splat state for a duration of time
     private IEnumerator preventMovement()
     {

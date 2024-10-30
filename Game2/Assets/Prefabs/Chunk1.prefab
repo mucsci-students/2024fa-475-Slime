@@ -194,8 +194,8 @@ MonoBehaviour:
   landJumpSound: {fileID: 8300000, guid: 7b4ccb759ae34cb4dadc66ee17e3ada6, type: 3}
   landSplatSound: {fileID: 8300000, guid: 7d0dfc5b376a4264292dcaaa39c54410, type: 3}
   snowLandSound: {fileID: 8300000, guid: 9374d072783511d4a9543de6edd58cc2, type: 3}
-  snowJumpSound: {fileID: 8300000, guid: 5d0ed3c53de58fe4cadb6b72187f7879, type: 3}
-  snowSplatSound: {fileID: 0}
+  snowJumpSound: {fileID: 8300000, guid: 057eb28a157b9ee489d592e74f4fb626, type: 3}
+  snowSplatSound: {fileID: 8300000, guid: 5d0ed3c53de58fe4cadb6b72187f7879, type: 3}
   iceLandSound: {fileID: 8300000, guid: cc673b4f76a329443b96633bb4e62475, type: 3}
   iceJumpSound: {fileID: 8300000, guid: 1c7920f4f16801545984c15603069a91, type: 3}
-  iceSplatSound: {fileID: 0}
+  iceSplatSound: {fileID: 8300000, guid: a6234280cc4be2246b767de49e958259, type: 3}
