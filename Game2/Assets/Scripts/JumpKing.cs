@@ -7,6 +7,8 @@ public class JumpKing : MonoBehaviour
 {
     // Inputs
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask iceGroundLayer;
+    [SerializeField] private LayerMask iceSlopesLayer;
     [SerializeField] private float maxJumpValue = 17.5f;
     [SerializeField] private float jumpIncreaseValue = 0.025f;
     [SerializeField] private float splatVelocityValue = -20f;
@@ -20,6 +22,8 @@ public class JumpKing : MonoBehaviour
     public float walkSpeed = 3f;
     private float moveInput;
     public bool isGrounded;
+    public bool isOnIceGround;
+    public bool isOnIceSlopes;
     private bool canJump = true;
     private bool canMove = true;
     private bool canFlip = true;
@@ -42,6 +46,12 @@ public class JumpKing : MonoBehaviour
     [SerializeField] public AudioClip jumpSound;
     private bool isFalling = false;
 
+    // Ice 
+    // [SerializeField] private float iceMoveInput;
+    // [SerializeField] private float iceBaseSpeed;
+    [SerializeField] private float iceSpeedMax;
+
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -61,6 +71,14 @@ public class JumpKing : MonoBehaviour
             Flip();
         }
 
+        //checks if on ice
+        isOnIceGround = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
+        new Vector2(0.5f, 0.2f), 0f, iceGroundLayer);
+        isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
+        new Vector2(0.5f, 0.2f), 0f, iceSlopesLayer);
+        anim.SetBool("isOnIce", isOnIceGround);
+
+        //checks if grounded
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.5f, 0.2f), 0f, groundLayer);
         anim.SetBool("isGrounded", isGrounded);
@@ -149,12 +167,6 @@ public class JumpKing : MonoBehaviour
             anim.SetTrigger("TriggerFall");
 
         } 
-
-        // Prevents the player from bouncing upon landing from high place
-        if (rb.velocity.y < -10)
-        {
-            isFalling = true;
-        }
     }
 
     // Allows the character to move left, right, and jump, which restrics horizontal movement
@@ -166,7 +178,7 @@ public class JumpKing : MonoBehaviour
             {
                 if (jumpResetTimer >= jumpResetDelay)
                 {
-                    if (Input.GetKey("space"))
+                    if (Input.GetKey("space") && !isOnIceSlopes)
                     {
                         canJump = true;
                         canMove = false;
@@ -193,13 +205,29 @@ public class JumpKing : MonoBehaviour
                     anim.SetBool("isRunning", false);
                 }
 
-                if (canMove && isJumping)
+                if (!(isOnIceGround && isOnIceSlopes))
                 {
-                    rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                    if (canMove && isJumping)
+                    {
+                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                    }
+                    else
+                    {
+                        rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                    }
                 }
-                else
+                else if (isOnIceGround || isOnIceSlopes)
                 {
-                    rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                    if (canMove && isJumping)
+                    {
+                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                    }
+                    else
+                    {
+                        rb.AddForce(new Vector2 (moveInput * iceSpeedMax, rb.velocity.y));
+                        //rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                    }
+                    
                 }
             }   
         }
@@ -208,6 +236,7 @@ public class JumpKing : MonoBehaviour
     //If you are on the ground, return to the idle state, if you hit a wall, trigger the wallBounce state
     void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.tag == "Ground")
         {
             // Sets wall bounce
