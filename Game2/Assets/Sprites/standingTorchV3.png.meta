@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9a743305fbac3042b287e4622f6254f
+guid: c8f56b720bb92b647be1d38642d02a5b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,96 +110,96 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: standingTorch_0
+      name: standingTorchV3_0
       rect:
         serializedVersion: 2
         x: 53
-        y: 112
-        width: 100
+        y: 94
+        width: 80
         height: 250
-      alignment: 9
-      pivot: {x: 0.5032859, y: 0.49539942}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a672a229f23a8054a8e54c61a1a88f9b
-      internalID: -1701309667
+      spriteID: d5bf07291145e2f469afb0db13e9ab75
+      internalID: 908996151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_1
+      name: standingTorchV3_2
       rect:
         serializedVersion: 2
-        x: 171
-        y: 112
-        width: 100
+        x: 170
+        y: 94
+        width: 80
         height: 250
-      alignment: 9
-      pivot: {x: 0.49558058, y: 0.49651214}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31c9dd4120fe03945b694919eb69396d
-      internalID: -383863222
+      spriteID: df9cad49f50a0a64fa917c71ed066eea
+      internalID: -1758143693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_2
+      name: standingTorchV3_3
       rect:
         serializedVersion: 2
-        x: 284
-        y: 112
-        width: 100
+        x: 282
+        y: 94
+        width: 80
         height: 250
-      alignment: 9
-      pivot: {x: 0.4903711, y: 0.49576336}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59de485827f3c284896217304da156fd
-      internalID: 1772173511
+      spriteID: 26ed32b83ac208948a38854945f3a88e
+      internalID: -842776803
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_4
+      name: standingTorchV3_4
       rect:
         serializedVersion: 2
-        x: 393
-        y: 112
-        width: 100
+        x: 394
+        y: 94
+        width: 80
         height: 250
-      alignment: 9
-      pivot: {x: 0.50870454, y: 0.4988393}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ed9856579f02847888d16697352b8e
-      internalID: 421135142
+      spriteID: 845c6b6e6a3f1ac489511ef4fa1aa184
+      internalID: -1132462599
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_5
+      name: standingTorchV3_6
       rect:
         serializedVersion: 2
         x: 501
-        y: 112
-        width: 100
+        y: 94
+        width: 80
         height: 250
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -208,19 +208,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2819c2570c6f7424e862e3959a6fd14b
-      internalID: -1184535524
+      spriteID: 7692f412d2caa2246bfc9b6b00504373
+      internalID: 762340360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_6
+      name: standingTorchV3_8
       rect:
         serializedVersion: 2
-        x: 614
-        y: 112
-        width: 100
+        x: 615
+        y: 94
+        width: 80
         height: 250
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -229,19 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20e3a56f3c04d164a8cca495a8d9331b
-      internalID: -316871462
+      spriteID: f80f6deabfcd0d14f808706f0ff6097a
+      internalID: -1083887077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_7
+      name: standingTorchV3_9
       rect:
         serializedVersion: 2
         x: 729
-        y: 112
-        width: 100
+        y: 94
+        width: 80
         height: 250
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -250,19 +250,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fe8f31cd0a251e4cbc2bb187976306a
-      internalID: -686064318
+      spriteID: 4c4c1c208f0a54545aff4b3b184852c7
+      internalID: 121430756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: standingTorch_8
+      name: standingTorchV3_10
       rect:
         serializedVersion: 2
         x: 839
-        y: 112
-        width: 100
+        y: 94
+        width: 80
         height: 250
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe717300fd93914fabddba88c98b955
-      internalID: -764713030
+      spriteID: c4921456422dc464ca5726fb289c7726
+      internalID: -395268058
       vertices: []
       indices: 
       edges: []
@@ -288,16 +288,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      standingTorch_0: -1701309667
-      standingTorch_1: -383863222
-      standingTorch_2: 1772173511
-      standingTorch_3: 481211958
-      standingTorch_4: 421135142
-      standingTorch_5: -1184535524
-      standingTorch_6: -316871462
-      standingTorch_7: -686064318
-      standingTorch_8: -764713030
-      standingTorch_9: -1206624080
+      standingTorchV3_0: 908996151
+      standingTorchV3_1: -1196372310
+      standingTorchV3_10: -395268058
+      standingTorchV3_11: -217316746
+      standingTorchV3_2: -1758143693
+      standingTorchV3_3: -842776803
+      standingTorchV3_4: -1132462599
+      standingTorchV3_5: -1582752995
+      standingTorchV3_6: 762340360
+      standingTorchV3_7: -1814151984
+      standingTorchV3_8: -1083887077
+      standingTorchV3_9: 121430756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
