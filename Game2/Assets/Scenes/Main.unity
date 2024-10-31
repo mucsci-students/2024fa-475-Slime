@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 36783216}
   - component: {fileID: 36783215}
   m_Layer: 8
-  m_Name: WallTriggerLeft
+  m_Name: Kevin_WallTriggerLeft
   m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10731,7 +10731,7 @@ GameObject:
   - component: {fileID: 233434106}
   - component: {fileID: 233434105}
   m_Layer: 6
-  m_Name: GroundTrigger
+  m_Name: Kevin_GroundTrigger
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14017,7 +14017,7 @@ GameObject:
   - component: {fileID: 688245582}
   - component: {fileID: 688245581}
   m_Layer: 8
-  m_Name: Walls
+  m_Name: Kevin_Walls
   m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34403,7 +34403,7 @@ GameObject:
   - component: {fileID: 874239541}
   - component: {fileID: 874239540}
   m_Layer: 10
-  m_Name: IceSlopes
+  m_Name: Kevin_IceSlopes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35678,7 +35678,7 @@ GameObject:
   - component: {fileID: 1147330372}
   - component: {fileID: 1147330371}
   m_Layer: 8
-  m_Name: WallTriggerRight
+  m_Name: Kevin_WallTriggerRight
   m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49266,7 +49266,7 @@ GameObject:
   - component: {fileID: 1364129520}
   - component: {fileID: 1364129519}
   m_Layer: 9
-  m_Name: IceGround
+  m_Name: Kevin_IceGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49960,7 +49960,7 @@ GameObject:
   - component: {fileID: 1403177609}
   - component: {fileID: 1403177611}
   m_Layer: 6
-  m_Name: Ground
+  m_Name: Kevin_Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
