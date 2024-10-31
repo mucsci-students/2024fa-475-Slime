@@ -257,7 +257,7 @@ public class JumpKing : MonoBehaviour
                 {
                     rb.velocity = new Vector2(0.0f, 0.0f);
                 }
-                
+                wb.sharedMaterial = normalMat;
                 StartCoroutine(preventMovement());
                 
             }
@@ -302,6 +302,9 @@ public class JumpKing : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.5f, 0.2f));
+         Gizmos.color = Color.blue;
+        Gizmos.DrawCube(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
+        new Vector2(0.45f, 0.2f));
     }
 
 }
