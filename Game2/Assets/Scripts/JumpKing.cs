@@ -83,15 +83,6 @@ public class JumpKing : MonoBehaviour
         new Vector2(0.45f, 0.2f), 0f, groundLayer);
         anim.SetBool("isGrounded", isGrounded);
 
-        if (isGrounded || isFalling)
-        {
-            wb.sharedMaterial = normalMat;
-        }
-        else if (!isGrounded && isWallBouncing)
-        {
-            wb.sharedMaterial = bounceMat;
-        }
-
 
         // Triggers the jump animation, increases the jump value by jumpIncreaseValue, with a max jumpValue of maxJumpValue
         if (canJump)
@@ -179,6 +170,15 @@ public class JumpKing : MonoBehaviour
     // Allows the character to move left, right, and jump, which restrics horizontal movement
     void FixedUpdate()
     {
+        if (isGrounded || isFalling)
+        {
+            wb.sharedMaterial = normalMat;
+        }
+        else if (!isGrounded && isWallBouncing)
+        {
+            wb.sharedMaterial = bounceMat;
+        }
+
         if (!PauseMenu.isPaused)
         {
             if (jumpValue == 0.0f && isGrounded && canMove)
