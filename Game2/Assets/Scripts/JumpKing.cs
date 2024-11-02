@@ -30,6 +30,7 @@ public class JumpKing : MonoBehaviour
     public bool isJumping = false;
     private bool isWallBouncing = false;
     public bool isSplat = false;
+    public bool isFalling = false;
     private bool isFacingRight = true;
     private float jumpResetTimer;
     public float jumpValue = 0.0f;
@@ -44,7 +45,6 @@ public class JumpKing : MonoBehaviour
     // Audio
     [SerializeField] public AudioClip wallBounceSound;
     [SerializeField] public AudioClip jumpSound;
-    private bool isFalling = false;
 
     // Ice 
     // [SerializeField] private float iceMoveInput;
@@ -76,7 +76,7 @@ public class JumpKing : MonoBehaviour
         new Vector2(0.45f, 0.2f), 0f, iceGroundLayer);
         isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.45f, 0.2f), 0f, iceSlopesLayer);
-        anim.SetBool("isOnIce", isOnIceGround);
+        // anim.SetBool("isOnIce", isOnIceGround);
 
         //checks if grounded
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
@@ -87,10 +87,11 @@ public class JumpKing : MonoBehaviour
         {
             wb.sharedMaterial = normalMat;
         }
-        else
+        else if (!isGrounded && isWallBouncing)
         {
             wb.sharedMaterial = bounceMat;
         }
+
 
         // Triggers the jump animation, increases the jump value by jumpIncreaseValue, with a max jumpValue of maxJumpValue
         if (canJump)
@@ -145,6 +146,7 @@ public class JumpKing : MonoBehaviour
         if (isWallBouncing)
         {
             anim.SetTrigger("TriggerWallBounce");
+            
         }
         else
         {
@@ -165,8 +167,13 @@ public class JumpKing : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
             anim.SetTrigger("TriggerFall");
-
         } 
+
+        // Checks if the player is falling
+        if (!isGrounded && !isJumping && !isWallBouncing)
+        {
+            isFalling = true;
+        }
     }
 
     // Allows the character to move left, right, and jump, which restrics horizontal movement
@@ -240,10 +247,11 @@ public class JumpKing : MonoBehaviour
 
         if (other.tag == "Ground")
         {
-            // Sets wall bounce
-            isJumping = false;
-            isWallBouncing = false;
+            // Sets player back to idle state booleans
+            wb.sharedMaterial = normalMat;
             isFalling = false;
+            isJumping = false;
+            isWallBouncing = false;            
 
             // Sets the face plant state in decreasing velocity < SplatVelocityValue, otherwise go to idle state
             if (isSplat)
