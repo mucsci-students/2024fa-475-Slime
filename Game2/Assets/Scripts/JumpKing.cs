@@ -47,9 +47,10 @@ public class JumpKing : MonoBehaviour
     [SerializeField] public AudioClip jumpSound;
 
     // Ice 
-    // [SerializeField] private float iceMoveInput;
-    // [SerializeField] private float iceBaseSpeed;
     [SerializeField] private float iceSpeed;
+
+    // Snow
+    [SerializeField] private float snowSpeed;
 
 
     void Start()
@@ -63,7 +64,8 @@ public class JumpKing : MonoBehaviour
     {
         jumpResetTimer += Time.deltaTime;
 
-        Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
+        //Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
+
         moveInput = Input.GetAxisRaw("Horizontal");
         
         if (canFlip)
@@ -238,14 +240,6 @@ public class JumpKing : MonoBehaviour
                         rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
                     }
                 }
-                // if (canMove && isJumping)
-                // {
-                //     rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);  
-                // }
-                // else
-                // {
-                //     rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
-                // }
             }   
         }
     }
@@ -290,6 +284,12 @@ public class JumpKing : MonoBehaviour
             SoundFXManager.instance.PlaySoundFXClip(wallBounceSound, transform, 0.75f);
             isJumping = false;
             isWallBouncing = true;
+        }
+        //adds blizzard force
+        if (other.tag == "SnowChunks")
+        {
+            rb.AddForce(new Vector2 (snowSpeed * Time.deltaTime * rb.velocity.x, rb.velocity.y));
+            Debug.Log ("In the snow");
         }
     }
     // Prevents the player from moving once they are in the Splat state for a duration of time
