@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: snowMove2
+  m_Name: moveSnow2
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,24 +21,24 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: -2.02, y: 1.66, z: 0}
-        inSlope: {x: 10.809999, y: -0.554, z: 0}
-        outSlope: {x: 10.809999, y: -0.554, z: 0}
+        inSlope: {x: 10.809999, y: 0, z: 0}
+        outSlope: {x: 10.809999, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 5
-        value: {x: 52.03, y: -1.11, z: 0}
-        inSlope: {x: 0.09686661, y: -0.277, z: 0}
-        outSlope: {x: 0.09686661, y: -0.277, z: 0}
+        value: {x: 52.03, y: 1.66, z: 0}
+        inSlope: {x: 0.09686661, y: 0, z: 0}
+        outSlope: {x: 0.09686661, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 10
-        value: {x: -1.0513339, y: -1.11, z: 0}
+        value: {x: -1.0513339, y: 1.66, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -136,24 +136,24 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 1.66
-        inSlope: -0.554
-        outSlope: -0.554
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 5
-        value: -1.11
-        inSlope: -0.277
-        outSlope: -0.277
+        value: 1.66
+        inSlope: 0
+        outSlope: 0
         tangentMode: 34
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 10
-        value: -1.11
+        value: 1.66
         inSlope: 0
         outSlope: 0
         tangentMode: 136
