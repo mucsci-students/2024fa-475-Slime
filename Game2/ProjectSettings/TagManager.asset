@@ -83,6 +83,9 @@ TagManager:
   - name: Walls
     uniqueID: 2117754009
     locked: 0
+  - name: Snow
+    uniqueID: 2616534499
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
