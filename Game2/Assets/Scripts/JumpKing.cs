@@ -97,14 +97,23 @@ public class JumpKing : MonoBehaviour
                 anim.SetBool("isRunning", false);
                 anim.SetTrigger("TriggerJump");
 
-                if (jumpValue == 0.0f)
+                // if (jumpValue == 0.0f)
+                // {
+                //     jumpValue += 2f;
+                // }
+                if (jumpValue < maxJumpValue)
                 {
-                    jumpValue += 2f;
+                    jumpValue += maxJumpValue * Time.deltaTime;
                 }
-                else if (jumpValue < maxJumpValue)
-                {
-                    jumpValue += jumpIncreaseValue;
-                }
+
+                // if (jumpValue == 0.0f)
+                // {
+                //     jumpValue += 2f;
+                // }
+                // else if (jumpValue < maxJumpValue)
+                // {
+                //     jumpValue += jumpIncreaseValue;
+                // }
             }
             if (Input.GetKeyUp("space"))
             {
