@@ -13,6 +13,10 @@ public class BlizzardDetection : MonoBehaviour
         {
             playerScript.cf.enabled = false;
         }
+        else if (other.tag == "IceChunks" || other.tag == "LandChunks")
+        {
+            playerScript.cf.enabled = false;
+        }
         else if (other.tag == "SnowChunks" || other.tag == "Snow")
         {
             playerScript.cf.enabled = true;
