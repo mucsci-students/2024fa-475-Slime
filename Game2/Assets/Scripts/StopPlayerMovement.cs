@@ -7,25 +7,43 @@ public class StopPlayerMovement : MonoBehaviour
 {
     public JumpKing playerScript;
     public GameObject princess;
+    public GameObject princessAnimator;
+    private Rigidbody2D rb;
     private Animator anim;
+    public GameObject targetPoint;
     private bool startTimer = false;
     private float timer = 0.0f;
+    
     void Start()
     {
-        anim = princess.GetComponent<Animator>();
+        anim = princessAnimator.GetComponent<Animator>();
+        rb = princess.GetComponent<Rigidbody2D>();
     }
     void Update()
     {
         if (startTimer)
         {
             timer += Time.deltaTime;
-            if (timer >= 2)
+            if (timer >= 8)
+            {
+                anim.SetTrigger("TriggerKiss");
+            }
+            else if (timer >= 4)
+            {
+                rb.velocity = new Vector2(-1.5f, rb.velocity.y);
+            }
+            else if (timer >= 3)
+            {
+                anim.SetTrigger("TriggerIdle");
+            }
+            else if (timer >= 2)
             {
                 anim.SetTrigger("TriggerJump");
             }
-            else if (timer >= 5)
+
+            if (Mathf.Abs(princess.transform.position.x - targetPoint.transform.position.x) < 0.2f)
             {
-                anim.SetTrigger("TriggerKiss");
+                rb.velocity = new Vector2(0f, rb.velocity.y);
             }
         }
     }
@@ -35,7 +53,6 @@ public class StopPlayerMovement : MonoBehaviour
         {
             playerScript.stopMovement = true;
             startTimer = !startTimer;
-
         }
     }
     
