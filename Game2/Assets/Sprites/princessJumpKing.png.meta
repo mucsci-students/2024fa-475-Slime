@@ -1,0 +1,3009 @@
+fileFormatVersion: 2
+guid: 7a99c5e8649e6c34da9cc54bf82b2824
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 40
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: princessJumpKing_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afdb0969d1de2e44082a404ed5ecbaba
+      internalID: -62277542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e1c8da435a0164f871a4f57a905cd7
+      internalID: -128584891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_2
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acea75d4dc134be48a2cd949fc5b0d4b
+      internalID: 2109556512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_3
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da13776ffb90c354db7bf15f21d1872b
+      internalID: -230396555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c15967543e5374b9c784f539d528d7
+      internalID: 1842404749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5453d07a98201ad4fbfc7ffed6eaf022
+      internalID: -329539706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_6
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97e161b2f2cda0d41b4e722930a4c568
+      internalID: 1917718164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_7
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d57c2c8ffef66f44a2d3315bb440b77
+      internalID: 105690023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_8
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 472
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17674ab9dc2f39c49bc87278e599206f
+      internalID: -1251558869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb9af253d5712546b663ca1cef13376
+      internalID: -1805852790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_10
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5e5a5408800ec3448e62a29cea52c59
+      internalID: -1356758234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_11
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b41bc688739a43419c37ac600e15fa1
+      internalID: -591382275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_12
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd48e0e6544e0eb4998fa2c263a76984
+      internalID: 46263783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_13
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa19d0fdf297eb141938e26c320f1eee
+      internalID: 719394555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_14
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 439
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba440cefb0aec44ca426f894d9f79ef
+      internalID: 1421643897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94bbbf1f6acf9df429da933ef8bbd321
+      internalID: 64650542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758bf7f31499bd54b996028c5221441d
+      internalID: 549369152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_17
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3ec733ecfd0fe47b9a7bb8434fbc0f
+      internalID: -1349971641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_18
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af7af028c9a9f44db86648b3329d8ea
+      internalID: 640178242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_19
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e623008a0eff8438144b8df3247685
+      internalID: -2105459183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30ddaf936c1b1fb4e80b4bf25736cef7
+      internalID: -1509254798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91da7a09efff2284695310300170045d
+      internalID: -1820104635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_22
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1914351f977e8f24aa10085ea4eb0941
+      internalID: 890726572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_23
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 406
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38efdc28bb1f1a944bc0b4de6beee66d
+      internalID: -66138162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_24
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 373
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb2dd04d1db48ca4b9598b820a94149e
+      internalID: -1889259959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 373
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0fa16bf73dedf40ab6b3cad7dd716b
+      internalID: 937385837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 373
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 681b0f22754d5984dba85dc68ef5260d
+      internalID: -817939344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_27
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 373
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b7c1ce6168f2f479251a237bc866db
+      internalID: -694683340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_28
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a811690ecead22540bc9fdc62ed5902a
+      internalID: -2103193972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e88e7ff4bdfd60479b3d33b6eff27ed
+      internalID: -1268830639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_30
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 727f88091900e114fb9c479216f0ab57
+      internalID: 216818520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_31
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428256ed4da0d3145ae1843690dc559f
+      internalID: -1549258776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_32
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7090defd9a99524dba57fa27ea9dd69
+      internalID: 120794696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_33
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed47406ed9de88a44bbf5c3a803db41d
+      internalID: 774439591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_34
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be03c42cc8f00644d8bfdda87f2be906
+      internalID: 751886581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_35
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ccf69bbd98e974fbc3b0514e40f198
+      internalID: 1419428228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_36
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f53d5f1bb6915e43bf9101364c64309
+      internalID: -1500739636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_37
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390b21b4889025c41969196656ad3fc4
+      internalID: 1561464223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4835bb3ee0d4724a96387fe21bf6365
+      internalID: -512053275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_39
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42cff03126b59e24fb965729f8c68c7a
+      internalID: 229600130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_40
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d76b854192e8c4293416e7a952bf8d
+      internalID: -1861029167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_41
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae6ee05570c5fd4ea67d14a43587df3
+      internalID: -959838870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_42
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379f12fc6bf139b469fd6f79b7e5e7c8
+      internalID: 1044415428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_43
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed764f34b669c314a9fd6a49d97ea60a
+      internalID: 737239594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_44
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fbc06e1e56f92044a8622d81f97e1d2
+      internalID: 1923009233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_45
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144e3ad65b3a65747847ab20579bd859
+      internalID: 1791985382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_46
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 307
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab1608ee50346b4dbbc8d6428653f48
+      internalID: -483995107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_47
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d3cd4fbafaace4084fbfe7a352fd7e
+      internalID: -823289017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc6a2bdd4b26f74db2b7cfd4e9b8ccf
+      internalID: 1984174454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_49
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41414296f9700f24cac320ffb90c18f3
+      internalID: 649777228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_50
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746e1167990f0004daaa2b37c424a183
+      internalID: -62637561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_51
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11ec4481cb7650e40ab66a070473a105
+      internalID: -1336859607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_52
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfa97c72f5551d4088850f0dda8df98
+      internalID: 589774901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_53
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01a1865e44021241b77198000005334
+      internalID: -1999800695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_54
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 162cfe817adc6ad4da1cacb2025b7ba3
+      internalID: -531833725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_55
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72032d42e4d6fe64a9cf9add6f782ad7
+      internalID: -1178396711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_56
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 274
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d4f898d5e795d4e8bbf3b9f2f701ce
+      internalID: 1193870423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_57
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39419cc91651134429794ff3d1b6f885
+      internalID: 310876289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_58
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e39d4e2f0d12d9444bc0462c84191586
+      internalID: -895712502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_59
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61db3c2186e3bf14a8ae81abb3e2b546
+      internalID: -1093139745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_60
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e186d9dbfd61a2e48b6ecd7db033bbaf
+      internalID: -1998294510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_61
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4d13d02c9baa34fa3b7522f69e910d
+      internalID: -1598004942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_62
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58806791ba34ee4b890f0ae6588a7ff
+      internalID: -2088327189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_63
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6bab3f29cb69b54ebd469de43ff15fe
+      internalID: -1204238696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_64
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6f3237584730949a7c52c1047be79a
+      internalID: -456820513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_65
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef90d0ede3fcb34ea60cbb8382330fa
+      internalID: 1655751519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_66
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 241
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f12e74cfb7f3b4a85cb244a0221db0
+      internalID: 906267768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_67
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa95ebdf42794249be759f4279d12a3
+      internalID: -1596676231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_68
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 749d8f1ca6317424c853a4c3a4ee789d
+      internalID: -1781798345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_69
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c523bd5bc9e7cf94cbd6ced79a0728d8
+      internalID: -2075214347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_70
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ce2a2efa279084a8df84bc330fadb8
+      internalID: 1789791085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_71
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a89e0556e096b348b79bef17c72cb4c
+      internalID: -1110793327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_72
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05deca29235dc1e4a9384712962030e2
+      internalID: 1669287625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_73
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde2c4db0680d0341968e69e4393562a
+      internalID: 1451483184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_74
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977976da6f46eb94ba6dbf3750a35572
+      internalID: -1036796567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_75
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997daf3d1163529439739550505aa2eb
+      internalID: 1680971118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_76
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 208
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95e1a135dff49a438ebe6299556d256
+      internalID: -514034832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_77
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054d301627d1ecc47bd4c4205527dc5f
+      internalID: -848788932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_78
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1232bfa581ca71944b54530479bdd1ef
+      internalID: 940631254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_79
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df562d5746c31e4c95bcc3be6a5293b
+      internalID: 1780226642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_80
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f18375a1d7915469be316fd0eb94e6
+      internalID: 1870086711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_81
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fea977daf05e74d937f20e44414d00
+      internalID: -1050897850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_82
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 175
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c4f4f767cea344f89801a10b283819
+      internalID: -1313262390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_83
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808044acdc17af14b83f12a238e3a9e4
+      internalID: -1783331359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_84
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e2e68738b4e4d4bbdada78cc4ff3f2
+      internalID: -217312019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_85
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408d436e19581584d86d5697fa32ed8c
+      internalID: 360107219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_86
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5093f1cb938098f4da89e0b2f6f2e66e
+      internalID: -131808930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_87
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c1505b0c7b3884698dcaad33ba0dd7
+      internalID: -25551786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_88
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7ed114f7f0ff545b2f225564ba0532
+      internalID: 378094510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_89
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85fb7175a3767024bab24a2578492028
+      internalID: -1858351558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_90
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a6bd2a9e8491984f9aee17eaf3e1fce
+      internalID: 680244056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_91
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62749acc9b4be5c4b9ca0aacd3ad42a5
+      internalID: 1975278221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_92
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be2af5f4a4153942b28bffe70b79cb1
+      internalID: -1532389158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_93
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 142
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd873d973cdc0044bafe1a565ea088ce
+      internalID: 827918170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_94
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda8ac3a0a4750e448a81c5710b4eaaa
+      internalID: -452237364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_95
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bd1f0a037515b4f98692d6da7e28e9
+      internalID: -762858244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_96
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 826390719baa0844a9dc5204363e5abe
+      internalID: 806394968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_97
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37eafb419bec464881db821a747b3c8
+      internalID: -1053417348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_98
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be4bc969aa8c45468c83ce703a7a439
+      internalID: -61497584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_99
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb50a94a1884eb849b4d6d2bcd2c301c
+      internalID: -110774010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_100
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc85c3c9ac282a40b0f9e34b3ab27dd
+      internalID: 180154931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_101
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75dacb31d661aca4fa896d929bf5f29b
+      internalID: -2002080300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_102
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eae2bf6def5d1e942b4db6493369d169
+      internalID: -1638842815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_103
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fb0698ecdd2b44793c09329f02e01a
+      internalID: 692748664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_104
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 109
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5fdc8fb3d5e554c82121eacc57ba39
+      internalID: -124143199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_105
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02859856a6664504d8c1180ebc9a14ec
+      internalID: -1974384440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_106
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6871b688af7bf9d4ba9a27a6433d4a13
+      internalID: -599542665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_107
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69aec39d7154f2b43ab0ab5217c9aa80
+      internalID: 440773551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_108
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b6a8bb6053a3941b8bd68e454f9fe8
+      internalID: -1675318053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_109
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd501d0fbd585e048a4d8f8ad745ca44
+      internalID: -67490627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_110
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9777cf176c6ce44964d58d708f8cc3
+      internalID: 1450138286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_111
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac72dfb9f055201448873bb9a49164d7
+      internalID: -15678781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_112
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b664f78b263d523468781ca0d9bd88e5
+      internalID: -1785087362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_113
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a87c8392f73d204493491c605a48218
+      internalID: 304456776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_114
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 76
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d164b8d4a455136409f61fc6639c0cfb
+      internalID: 1090632941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_115
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56df3a1f820b1a94f9aa6baa936e9ef2
+      internalID: -1661420581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_116
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e90e964c74461468e990cbe239447d
+      internalID: -1819124136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_117
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36466dc66fd82144975fac3ed6362cc
+      internalID: -1000495846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_118
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce59d4c3d2e68d24d8b173b59ce2d710
+      internalID: 51186841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_119
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e84fcb550017ec43a37be8963a083c0
+      internalID: -758523943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_120
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2df4218bf0f504ab88c673be1bad1f
+      internalID: -63742711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_121
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2509b0835a6de344a30a0059aec615d
+      internalID: -495224824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_122
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885fd6f86af83e241bdfd725ee84c87e
+      internalID: 1862781941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_123
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3916bbd9d8461643af6bda7ef963978
+      internalID: -661685150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_124
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 43
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc05d065b67bb24e95c28131a065b43
+      internalID: 1370483103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_125
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190d8870005ad1d4c8c450c2e12b537c
+      internalID: -599952593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_126
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4474dce85076969429909d4a31b8e812
+      internalID: 2079508848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_127
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac671d0b4418543b7da4c961aec121
+      internalID: 201816418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_128
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ecf3ae1e7b5ac4ca83e8fb0785c023
+      internalID: 1723280678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_129
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b034581815f6ad24eb2ca26ebc178ba3
+      internalID: -9285165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princessJumpKing_130
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 10
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60744e0d49885754588bce6e0862a6e1
+      internalID: -1481634133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      princessJumpKing_0: -62277542
+      princessJumpKing_1: -128584891
+      princessJumpKing_10: -1356758234
+      princessJumpKing_100: 180154931
+      princessJumpKing_101: -2002080300
+      princessJumpKing_102: -1638842815
+      princessJumpKing_103: 692748664
+      princessJumpKing_104: -124143199
+      princessJumpKing_105: -1974384440
+      princessJumpKing_106: -599542665
+      princessJumpKing_107: 440773551
+      princessJumpKing_108: -1675318053
+      princessJumpKing_109: -67490627
+      princessJumpKing_11: -591382275
+      princessJumpKing_110: 1450138286
+      princessJumpKing_111: -15678781
+      princessJumpKing_112: -1785087362
+      princessJumpKing_113: 304456776
+      princessJumpKing_114: 1090632941
+      princessJumpKing_115: -1661420581
+      princessJumpKing_116: -1819124136
+      princessJumpKing_117: -1000495846
+      princessJumpKing_118: 51186841
+      princessJumpKing_119: -758523943
+      princessJumpKing_12: 46263783
+      princessJumpKing_120: -63742711
+      princessJumpKing_121: -495224824
+      princessJumpKing_122: 1862781941
+      princessJumpKing_123: -661685150
+      princessJumpKing_124: 1370483103
+      princessJumpKing_125: -599952593
+      princessJumpKing_126: 2079508848
+      princessJumpKing_127: 201816418
+      princessJumpKing_128: 1723280678
+      princessJumpKing_129: -9285165
+      princessJumpKing_13: 719394555
+      princessJumpKing_130: -1481634133
+      princessJumpKing_14: 1421643897
+      princessJumpKing_15: 64650542
+      princessJumpKing_16: 549369152
+      princessJumpKing_17: -1349971641
+      princessJumpKing_18: 640178242
+      princessJumpKing_19: -2105459183
+      princessJumpKing_2: 2109556512
+      princessJumpKing_20: -1509254798
+      princessJumpKing_21: -1820104635
+      princessJumpKing_22: 890726572
+      princessJumpKing_23: -66138162
+      princessJumpKing_24: -1889259959
+      princessJumpKing_25: 937385837
+      princessJumpKing_26: -817939344
+      princessJumpKing_27: -694683340
+      princessJumpKing_28: -2103193972
+      princessJumpKing_29: -1268830639
+      princessJumpKing_3: -230396555
+      princessJumpKing_30: 216818520
+      princessJumpKing_31: -1549258776
+      princessJumpKing_32: 120794696
+      princessJumpKing_33: 774439591
+      princessJumpKing_34: 751886581
+      princessJumpKing_35: 1419428228
+      princessJumpKing_36: -1500739636
+      princessJumpKing_37: 1561464223
+      princessJumpKing_38: -512053275
+      princessJumpKing_39: 229600130
+      princessJumpKing_4: 1842404749
+      princessJumpKing_40: -1861029167
+      princessJumpKing_41: -959838870
+      princessJumpKing_42: 1044415428
+      princessJumpKing_43: 737239594
+      princessJumpKing_44: 1923009233
+      princessJumpKing_45: 1791985382
+      princessJumpKing_46: -483995107
+      princessJumpKing_47: -823289017
+      princessJumpKing_48: 1984174454
+      princessJumpKing_49: 649777228
+      princessJumpKing_5: -329539706
+      princessJumpKing_50: -62637561
+      princessJumpKing_51: -1336859607
+      princessJumpKing_52: 589774901
+      princessJumpKing_53: -1999800695
+      princessJumpKing_54: -531833725
+      princessJumpKing_55: -1178396711
+      princessJumpKing_56: 1193870423
+      princessJumpKing_57: 310876289
+      princessJumpKing_58: -895712502
+      princessJumpKing_59: -1093139745
+      princessJumpKing_6: 1917718164
+      princessJumpKing_60: -1998294510
+      princessJumpKing_61: -1598004942
+      princessJumpKing_62: -2088327189
+      princessJumpKing_63: -1204238696
+      princessJumpKing_64: -456820513
+      princessJumpKing_65: 1655751519
+      princessJumpKing_66: 906267768
+      princessJumpKing_67: -1596676231
+      princessJumpKing_68: -1781798345
+      princessJumpKing_69: -2075214347
+      princessJumpKing_7: 105690023
+      princessJumpKing_70: 1789791085
+      princessJumpKing_71: -1110793327
+      princessJumpKing_72: 1669287625
+      princessJumpKing_73: 1451483184
+      princessJumpKing_74: -1036796567
+      princessJumpKing_75: 1680971118
+      princessJumpKing_76: -514034832
+      princessJumpKing_77: -848788932
+      princessJumpKing_78: 940631254
+      princessJumpKing_79: 1780226642
+      princessJumpKing_8: -1251558869
+      princessJumpKing_80: 1870086711
+      princessJumpKing_81: -1050897850
+      princessJumpKing_82: -1313262390
+      princessJumpKing_83: -1783331359
+      princessJumpKing_84: -217312019
+      princessJumpKing_85: 360107219
+      princessJumpKing_86: -131808930
+      princessJumpKing_87: -25551786
+      princessJumpKing_88: 378094510
+      princessJumpKing_89: -1858351558
+      princessJumpKing_9: -1805852790
+      princessJumpKing_90: 680244056
+      princessJumpKing_91: 1975278221
+      princessJumpKing_92: -1532389158
+      princessJumpKing_93: 827918170
+      princessJumpKing_94: -452237364
+      princessJumpKing_95: -762858244
+      princessJumpKing_96: 806394968
+      princessJumpKing_97: -1053417348
+      princessJumpKing_98: -61497584
+      princessJumpKing_99: -110774010
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

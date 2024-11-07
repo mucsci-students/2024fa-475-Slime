@@ -56,6 +56,10 @@ public class JumpKing : MonoBehaviour
     // Snow
     // [SerializeField] private float snowSpeed;
 
+    // Princess
+    public bool stopMovement = false;
+    public bool stopJump = false;
+
 
     void Start()
     {
@@ -70,8 +74,15 @@ public class JumpKing : MonoBehaviour
         jumpResetTimer += Time.deltaTime;
 
         //Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
-
-        moveInput = Input.GetAxisRaw("Horizontal");
+        if (stopMovement == false)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+        }
+        else
+        {
+            rb.velocity = new Vector2(0.0f, 0.0f);
+            anim.SetBool("isRunning", false);
+        }
         
         if (canFlip)
         {
@@ -92,49 +103,50 @@ public class JumpKing : MonoBehaviour
 
 
         // Triggers the jump animation, increases the jump value by jumpIncreaseValue, with a max jumpValue of maxJumpValue
-        if (canJump)
-        {
-            if (Input.GetKeyDown("space") && isGrounded)
+            if (canJump)
             {
-                rb.velocity = new Vector2 (0.0f, rb.velocity.y);
-            }
-            if (Input.GetKey("space") && isGrounded)
-            {
-                rb.velocity = new Vector2 (0.0f, rb.velocity.y);
-                anim.SetBool("isRunning", false);
-                anim.SetTrigger("TriggerJump");
-
-                // if (jumpValue == 0.0f)
-                // {
-                //     jumpValue += 2f;
-                // }
-                if (jumpValue < maxJumpValue)
+                if (Input.GetKeyDown("space") && isGrounded)
                 {
-                    jumpValue += maxJumpValue * Time.deltaTime;
+                    rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                 }
-
-                // if (jumpValue == 0.0f)
-                // {
-                //     jumpValue += 2f;
-                // }
-                // else if (jumpValue < maxJumpValue)
-                // {
-                //     jumpValue += jumpIncreaseValue;
-                // }
-            }
-            if (Input.GetKeyUp("space"))
-            {
-                SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
-                isJumping = true;
-                if(isGrounded)
+                if (Input.GetKey("space") && isGrounded)
                 {
-                    rb.velocity = new Vector2 (moveInput * walkSpeed, jumpValue);
-                    jumpValue = 0.0f;
+                    rb.velocity = new Vector2 (0.0f, rb.velocity.y);
+                    anim.SetBool("isRunning", false);
+                    anim.SetTrigger("TriggerJump");
+
+                    // if (jumpValue == 0.0f)
+                    // {
+                    //     jumpValue += 2f;
+                    // }
+                    if (jumpValue < maxJumpValue)
+                    {
+                        jumpValue += maxJumpValue * Time.deltaTime;
+                    }
+
+                    // if (jumpValue == 0.0f)
+                    // {
+                    //     jumpValue += 2f;
+                    // }
+                    // else if (jumpValue < maxJumpValue)
+                    // {
+                    //     jumpValue += jumpIncreaseValue;
+                    // }
                 }
-                canMove = true;
-                canJump = false;
-            }
+                if (Input.GetKeyUp("space"))
+                {
+                    SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
+                    isJumping = true;
+                    if(isGrounded)
+                    {
+                        rb.velocity = new Vector2 (moveInput * walkSpeed, jumpValue);
+                        jumpValue = 0.0f;
+                    }
+                    canMove = true;
+                    canJump = false;
+                }
         }
+        
         
         // If the player's velocity is increasing, trigger the leap animation, otherwise trigger the falling animation
         if (isJumping)
@@ -202,59 +214,69 @@ public class JumpKing : MonoBehaviour
         {
             wb.sharedMaterial = bounceMat;
         }
-
-        if (!PauseMenu.isPaused)
-        {
-            if (jumpValue == 0.0f && isGrounded && canMove)
+        // if (!stopMovement)
+        // {
+            if (!PauseMenu.isPaused)
             {
-                if (jumpResetTimer >= jumpResetDelay)
+                if (jumpValue == 0.0f && isGrounded && canMove)
                 {
-                    if (Input.GetKey("space") && !isOnIceSlopes)
+                    if (jumpResetTimer >= jumpResetDelay)
                     {
-                        canJump = true;
-                        canMove = false;
+                        if (Input.GetKey("space") && !isOnIceSlopes)
+                        {
+                            if (stopJump == false)
+                            {
+                                canJump = true;
+                                canMove = false;
+                                anim.SetBool("isSplat", false);
+                                isSplat = false;
+                                jumpResetTimer = 0f;
+                            }
+                            else
+                            {
+                                canJump = false;
+                            }  
+                            
+                        }
+                    }
+                    
+                    if (moveInput < 0f)
+                    {
+                        anim.SetBool("isRunning", true);
                         anim.SetBool("isSplat", false);
                         isSplat = false;
-                        jumpResetTimer = 0f;
                     }
-                }
-                
-                if (moveInput < 0f)
-                {
-                    anim.SetBool("isRunning", true);
-                    anim.SetBool("isSplat", false);
-                    isSplat = false;
-                }
-                else if (moveInput > 0f)
-                {
-                    anim.SetBool("isRunning", true);
-                    anim.SetBool("isSplat", false);
-                    isSplat = false;
-                }
-                else
-                {
-                    anim.SetBool("isRunning", false);
-                }
-
-                // checks if on ice
-                if (canMove && isJumping)
-                {
-                    rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
-                    
-                }
-                else
-                {
-                    if (isOnIceGround || isOnIceSlopes)
+                    else if (moveInput > 0f)
                     {
-                        rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
+                        anim.SetBool("isRunning", true);
+                        anim.SetBool("isSplat", false);
+                        isSplat = false;
                     }
                     else
                     {
-                        rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                        anim.SetBool("isRunning", false);
                     }
-                }
-            }   
-        }
+
+                    // checks if on ice
+                    if (canMove && isJumping)
+                    {
+                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                        
+                    }
+                    else
+                    {
+                        if (isOnIceGround || isOnIceSlopes)
+                        {
+                            rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
+                        }
+                        else
+                        {
+                            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                        }
+                    }
+                }   
+            }
+        //}
     }
 
     //If you are on the ground, return to the idle state, if you hit a wall, trigger the wallBounce state
