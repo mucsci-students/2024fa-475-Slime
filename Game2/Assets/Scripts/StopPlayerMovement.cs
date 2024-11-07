@@ -24,15 +24,15 @@ public class StopPlayerMovement : MonoBehaviour
         if (startTimer)
         {
             timer += Time.deltaTime;
-            if (timer >= 8)
+            if (timer >= 10)
             {
                 anim.SetTrigger("TriggerKiss");
             }
-            else if (timer >= 4)
+            else if (timer >= 5)
             {
-                rb.velocity = new Vector2(-1.5f, rb.velocity.y);
+                rb.velocity = new Vector2(-1.2f, rb.velocity.y);
             }
-            else if (timer >= 3)
+            else if (timer >= 3.25)
             {
                 anim.SetTrigger("TriggerIdle");
             }
