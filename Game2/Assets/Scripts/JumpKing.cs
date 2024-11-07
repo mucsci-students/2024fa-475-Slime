@@ -53,12 +53,14 @@ public class JumpKing : MonoBehaviour
     // ConstantForce
     public ConstantForce2D cf;
     public float cfTimer = 0.0f;
-    // Snow
-    // [SerializeField] private float snowSpeed;
 
     // Princess
     public bool stopMovement = false;
     public bool stopJump = false;
+
+    // Particles
+    public GameObject particleSpawn;
+    public GameObject currentParticles = null;
 
 
     void Start()
@@ -136,6 +138,8 @@ public class JumpKing : MonoBehaviour
                 if (Input.GetKeyUp("space"))
                 {
                     SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
+                    currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
+                    StartCoroutine(destroyParticles());
                     isJumping = true;
                     if(isGrounded)
                     {
@@ -282,24 +286,6 @@ public class JumpKing : MonoBehaviour
     //If you are on the ground, return to the idle state, if you hit a wall, trigger the wallBounce state
     void OnTriggerEnter2D(Collider2D other)
     {
-        // // Adds blizzard force
-        // if (other.tag == "ThickSnow")
-        // {
-        //     cf.enabled = false;
-        // }
-        // //else if (other.tag == "SnowChunks" && other.tag != "ThickSnow")
-        // else if (other.tag == "SnowChunks" || other.tag == "Snow")
-        // {
-        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y));
-        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y), ForceMode2D.Impulse);
-        //     cf.enabled = true;
-        //     Debug.Log ("In the snow");
-        // }
-        // else
-        // {
-        //     cf.enabled = false;
-        // }
-
         if (other.tag == "Ground")
         {
             // Sets player back to idle state booleans
@@ -347,6 +333,12 @@ public class JumpKing : MonoBehaviour
         canMove = true;
         canJump = true;
         canFlip = true;
+    }
+
+    private IEnumerator destroyParticles()
+    {
+        yield return new WaitForSeconds (.25f);
+        Destroy(currentParticles);
     }
 
     // Rotates the sprite around to face the other direction
