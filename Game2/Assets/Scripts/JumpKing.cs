@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -47,15 +48,20 @@ public class JumpKing : MonoBehaviour
     [SerializeField] public AudioClip jumpSound;
 
     // Ice 
-    // [SerializeField] private float iceMoveInput;
-    // [SerializeField] private float iceBaseSpeed;
     [SerializeField] private float iceSpeed;
+
+    // ConstantForce
+    public ConstantForce2D cf;
+    public float cfTimer = 0.0f;
+    // Snow
+    // [SerializeField] private float snowSpeed;
 
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         wb = walls.GetComponent<Rigidbody2D>();
+        cf = gameObject.GetComponent<ConstantForce2D>();
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -63,7 +69,8 @@ public class JumpKing : MonoBehaviour
     {
         jumpResetTimer += Time.deltaTime;
 
-        Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
+        //Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
+
         moveInput = Input.GetAxisRaw("Horizontal");
         
         if (canFlip)
@@ -174,6 +181,14 @@ public class JumpKing : MonoBehaviour
         {
             isFalling = true;
         }
+
+        // Adds blizzard velocity force to player
+        cfTimer += Time.deltaTime;
+        if (cfTimer >= 5)
+        {
+            cf.force = new Vector2(cf.force.x * -1, cf.force.y);
+            cfTimer = 0.0f;
+        }
     }
 
     // Allows the character to move left, right, and jump, which restrics horizontal movement
@@ -238,14 +253,6 @@ public class JumpKing : MonoBehaviour
                         rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
                     }
                 }
-                // if (canMove && isJumping)
-                // {
-                //     rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);  
-                // }
-                // else
-                // {
-                //     rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
-                // }
             }   
         }
     }
@@ -253,6 +260,23 @@ public class JumpKing : MonoBehaviour
     //If you are on the ground, return to the idle state, if you hit a wall, trigger the wallBounce state
     void OnTriggerEnter2D(Collider2D other)
     {
+        // // Adds blizzard force
+        // if (other.tag == "ThickSnow")
+        // {
+        //     cf.enabled = false;
+        // }
+        // //else if (other.tag == "SnowChunks" && other.tag != "ThickSnow")
+        // else if (other.tag == "SnowChunks" || other.tag == "Snow")
+        // {
+        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y));
+        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y), ForceMode2D.Impulse);
+        //     cf.enabled = true;
+        //     Debug.Log ("In the snow");
+        // }
+        // else
+        // {
+        //     cf.enabled = false;
+        // }
 
         if (other.tag == "Ground")
         {
@@ -291,6 +315,8 @@ public class JumpKing : MonoBehaviour
             isJumping = false;
             isWallBouncing = true;
         }
+
+        
     }
     // Prevents the player from moving once they are in the Splat state for a duration of time
     private IEnumerator preventMovement()
