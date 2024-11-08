@@ -7,13 +7,21 @@ public class SnowParticles : MonoBehaviour
 {
     public JumpKing playerScript;
     public GameObject particleSpawn;
-    public GameObject currentParticles = null;
+    private GameObject currentParticles = null;
+    private bool canNewParticle = true;
     
     void OnTriggerEnter2D (Collider2D other)
     {
         if (other.tag == "PlayerBox")
-        currentParticles = Instantiate(particleSpawn, new Vector3(playerScript.transform.position.x, playerScript.transform.position.y - .25f, 0), particleSpawn.transform.rotation);
-        StartCoroutine(destroyParticles());
+        {
+            if (canNewParticle)
+            {
+                canNewParticle = !canNewParticle;
+                currentParticles = Instantiate(particleSpawn, new Vector3(playerScript.transform.position.x, playerScript.transform.position.y - .25f, 0), particleSpawn.transform.rotation);
+                StartCoroutine(destroyParticles());
+            }
+        }
+        
     }
 
     // Update is called once per frame
@@ -21,5 +29,6 @@ public class SnowParticles : MonoBehaviour
     {
         yield return new WaitForSeconds (.4f);
         Destroy(currentParticles);
+        canNewParticle = !canNewParticle;
     }
 }

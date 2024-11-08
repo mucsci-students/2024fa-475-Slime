@@ -60,7 +60,8 @@ public class JumpKing : MonoBehaviour
 
     // Particles
     public GameObject particleSpawn;
-    public GameObject currentParticles = null;
+    private GameObject currentParticles = null;
+    private bool canNewParticle = true;
 
 
     void Start()
@@ -138,8 +139,13 @@ public class JumpKing : MonoBehaviour
                 if (Input.GetKeyUp("space"))
                 {
                     SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
-                    currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
-                    StartCoroutine(destroyParticles());
+                    if (canNewParticle)
+                    {
+                        canNewParticle = !canNewParticle;
+                        currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
+                        StartCoroutine(destroyParticles());
+                    }
+                    
                     isJumping = true;
                     if(isGrounded)
                     {
@@ -339,6 +345,7 @@ public class JumpKing : MonoBehaviour
     {
         yield return new WaitForSeconds (.25f);
         Destroy(currentParticles);
+        canNewParticle = !canNewParticle;
     }
 
     // Rotates the sprite around to face the other direction
