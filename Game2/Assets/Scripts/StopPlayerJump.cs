@@ -7,9 +7,17 @@ public class StopPlayerJump : MonoBehaviour
     public JumpKing playerScript;
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "PlayerBox")
         {
             playerScript.stopJump = true;
+        }
+    }
+
+    void OnTriggerExit2D (Collider2D other)
+    {
+        if (other.tag == "PlayerBox")
+        {
+            playerScript.stopJump = false;
         }
     }
 }

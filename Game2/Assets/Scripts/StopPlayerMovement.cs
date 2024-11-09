@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class StopPlayerMovement : MonoBehaviour
 {
+    public GameObject winMenu;
+    public GameObject pauseMenu;
     public JumpKing playerScript;
     public GameObject princess;
     public GameObject princessAnimator;
@@ -18,13 +20,19 @@ public class StopPlayerMovement : MonoBehaviour
     {
         anim = princessAnimator.GetComponent<Animator>();
         rb = princess.GetComponent<Rigidbody2D>();
+        winMenu.SetActive(false);
     }
     void Update()
     {
         if (startTimer)
         {
             timer += Time.deltaTime;
-            if (timer >= 10)
+            if (timer >= 12)
+            {
+                Destroy(pauseMenu);
+                winMenu.SetActive(true);
+            }
+            else if (timer >= 10)
             {
                 anim.SetTrigger("TriggerKiss");
             }
@@ -49,7 +57,7 @@ public class StopPlayerMovement : MonoBehaviour
     }
     void OnTriggerEnter2D (Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "PlayerBox")
         {
             playerScript.stopMovement = true;
             startTimer = !startTimer;

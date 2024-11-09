@@ -111,7 +111,8 @@ public class JumpKing : MonoBehaviour
                 {
                     rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                 }
-                if (Input.GetKey("space") && isGrounded)
+
+                if (Input.GetKey("space") && isGrounded && !stopJump)
                 {
                     rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                     anim.SetBool("isRunning", false);
@@ -233,7 +234,6 @@ public class JumpKing : MonoBehaviour
                             {
                                 canJump = false;
                             }  
-                            
                         }
                     }
                     

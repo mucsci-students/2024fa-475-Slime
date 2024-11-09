@@ -10,6 +10,12 @@ public class TitleScreen : MonoBehaviour
         SceneManager.LoadScene("Main");
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void LoadTitle()
+    {
+        SceneManager.LoadScene("Title");
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        
+    }
     public void Quit()
     {
         Application.Quit();
