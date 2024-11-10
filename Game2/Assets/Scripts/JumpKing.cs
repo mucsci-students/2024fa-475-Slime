@@ -11,7 +11,7 @@ public class JumpKing : MonoBehaviour
     [SerializeField] private LayerMask iceGroundLayer;
     [SerializeField] private LayerMask iceSlopesLayer;
     [SerializeField] private float maxJumpValue = 17.5f;
-    [SerializeField] private float jumpIncreaseValue = 0.025f;
+    // [SerializeField] private float jumpIncreaseValue = 0.025f;
     [SerializeField] private float splatVelocityValue = -20f;
     [SerializeField] private float jumpResetDelay = 0.25f;
     [SerializeField] private float horizontalDistance = 6f;
@@ -53,8 +53,15 @@ public class JumpKing : MonoBehaviour
     // ConstantForce
     public ConstantForce2D cf;
     public float cfTimer = 0.0f;
-    // Snow
-    // [SerializeField] private float snowSpeed;
+
+    // Princess
+    public bool stopMovement = false;
+    public bool stopJump = false;
+
+    // Particles
+    public GameObject particleSpawn;
+    private GameObject currentParticles = null;
+    private bool canNewParticle = true;
 
 
     void Start()
@@ -70,8 +77,15 @@ public class JumpKing : MonoBehaviour
         jumpResetTimer += Time.deltaTime;
 
         //Debug.Log ("Current X velocity is " + rb.velocity.x + "  |  Current Y velocity is " + rb.velocity.y);
-
-        moveInput = Input.GetAxisRaw("Horizontal");
+        if (stopMovement == false)
+        {
+            moveInput = Input.GetAxisRaw("Horizontal");
+        }
+        else
+        {
+            rb.velocity = new Vector2(0.0f, 0.0f);
+            anim.SetBool("isRunning", false);
+        }
         
         if (canFlip)
         {
@@ -83,7 +97,6 @@ public class JumpKing : MonoBehaviour
         new Vector2(0.45f, 0.2f), 0f, iceGroundLayer);
         isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.45f, 0.2f), 0f, iceSlopesLayer);
-        // anim.SetBool("isOnIce", isOnIceGround);
 
         //checks if grounded
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
@@ -92,49 +105,46 @@ public class JumpKing : MonoBehaviour
 
 
         // Triggers the jump animation, increases the jump value by jumpIncreaseValue, with a max jumpValue of maxJumpValue
-        if (canJump)
-        {
-            if (Input.GetKeyDown("space") && isGrounded)
+            if (canJump)
             {
-                rb.velocity = new Vector2 (0.0f, rb.velocity.y);
-            }
-            if (Input.GetKey("space") && isGrounded)
-            {
-                rb.velocity = new Vector2 (0.0f, rb.velocity.y);
-                anim.SetBool("isRunning", false);
-                anim.SetTrigger("TriggerJump");
-
-                // if (jumpValue == 0.0f)
-                // {
-                //     jumpValue += 2f;
-                // }
-                if (jumpValue < maxJumpValue)
+                if (Input.GetKeyDown("space") && isGrounded)
                 {
-                    jumpValue += maxJumpValue * Time.deltaTime;
+                    rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                 }
 
-                // if (jumpValue == 0.0f)
-                // {
-                //     jumpValue += 2f;
-                // }
-                // else if (jumpValue < maxJumpValue)
-                // {
-                //     jumpValue += jumpIncreaseValue;
-                // }
-            }
-            if (Input.GetKeyUp("space"))
-            {
-                SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
-                isJumping = true;
-                if(isGrounded)
+                if (Input.GetKey("space") && isGrounded && !stopJump)
                 {
-                    rb.velocity = new Vector2 (moveInput * walkSpeed, jumpValue);
-                    jumpValue = 0.0f;
+                    rb.velocity = new Vector2 (0.0f, rb.velocity.y);
+                    anim.SetBool("isRunning", false);
+                    anim.SetTrigger("TriggerJump");
+
+                    if (jumpValue < maxJumpValue)
+                    {
+                        jumpValue += maxJumpValue * Time.deltaTime;
+                    }
                 }
-                canMove = true;
-                canJump = false;
-            }
+                if (Input.GetKeyUp("space"))
+                {
+                    ground.enabled = false;
+                    SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
+                    if (canNewParticle)
+                    {
+                        canNewParticle = !canNewParticle;
+                        currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
+                        StartCoroutine(destroyParticles());
+                    }
+                    
+                    isJumping = true;
+                    if(isGrounded)
+                    {
+                        rb.velocity = new Vector2 (moveInput * walkSpeed, jumpValue);
+                        jumpValue = 0.0f;
+                    }
+                    canMove = true;
+                    canJump = false;
+                }
         }
+        
         
         // If the player's velocity is increasing, trigger the leap animation, otherwise trigger the falling animation
         if (isJumping)
@@ -155,10 +165,10 @@ public class JumpKing : MonoBehaviour
             anim.SetTrigger("TriggerWallBounce");
             
         }
-        else
-        {
-            ground.enabled = true;
-        }
+        // else
+        // {
+        //     ground.enabled = true;
+        // }
 
         // Sets the Splat boolean to true if the player is falling at high speeds
         if (rb.velocity.y < splatVelocityValue)
@@ -202,84 +212,76 @@ public class JumpKing : MonoBehaviour
         {
             wb.sharedMaterial = bounceMat;
         }
-
-        if (!PauseMenu.isPaused)
-        {
-            if (jumpValue == 0.0f && isGrounded && canMove)
+        // if (!stopMovement)
+        // {
+            if (!PauseMenu.isPaused)
             {
-                if (jumpResetTimer >= jumpResetDelay)
+                if (jumpValue == 0.0f && isGrounded && canMove)
                 {
-                    if (Input.GetKey("space") && !isOnIceSlopes)
+                    if (jumpResetTimer >= jumpResetDelay)
                     {
-                        canJump = true;
-                        canMove = false;
+                        if (Input.GetKey("space") && !isOnIceSlopes)
+                        {
+                            if (stopJump == false)
+                            {
+                                canJump = true;
+                                canMove = false;
+                                anim.SetBool("isSplat", false);
+                                isSplat = false;
+                                jumpResetTimer = 0f;
+                            }
+                            else
+                            {
+                                canJump = false;
+                            }  
+                        }
+                    }
+                    
+                    if (moveInput < 0f)
+                    {
+                        anim.SetBool("isRunning", true);
                         anim.SetBool("isSplat", false);
                         isSplat = false;
-                        jumpResetTimer = 0f;
                     }
-                }
-                
-                if (moveInput < 0f)
-                {
-                    anim.SetBool("isRunning", true);
-                    anim.SetBool("isSplat", false);
-                    isSplat = false;
-                }
-                else if (moveInput > 0f)
-                {
-                    anim.SetBool("isRunning", true);
-                    anim.SetBool("isSplat", false);
-                    isSplat = false;
-                }
-                else
-                {
-                    anim.SetBool("isRunning", false);
-                }
-
-                // checks if on ice
-                if (canMove && isJumping)
-                {
-                    rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
-                    
-                }
-                else
-                {
-                    if (isOnIceGround || isOnIceSlopes)
+                    else if (moveInput > 0f)
                     {
-                        rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
+                        anim.SetBool("isRunning", true);
+                        anim.SetBool("isSplat", false);
+                        isSplat = false;
                     }
                     else
                     {
-                        rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                        anim.SetBool("isRunning", false);
                     }
-                }
-            }   
-        }
+
+                    // checks if on ice
+                    if (canMove && isJumping)
+                    {
+                        rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
+                        
+                    }
+                    else
+                    {
+                        if (isOnIceGround || isOnIceSlopes)
+                        {
+                            rb.AddForce(new Vector2 (moveInput * iceSpeed, rb.velocity.y));
+                        }
+                        else
+                        {
+                            rb.velocity = new Vector2(moveInput * walkSpeed, rb.velocity.y);
+                        }
+                    }
+                }   
+            }
+        //}
     }
 
     //If you are on the ground, return to the idle state, if you hit a wall, trigger the wallBounce state
     void OnTriggerEnter2D(Collider2D other)
     {
-        // // Adds blizzard force
-        // if (other.tag == "ThickSnow")
-        // {
-        //     cf.enabled = false;
-        // }
-        // //else if (other.tag == "SnowChunks" && other.tag != "ThickSnow")
-        // else if (other.tag == "SnowChunks" || other.tag == "Snow")
-        // {
-        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y));
-        //     //rb.AddForce(new Vector2 (snowSpeed, rb.velocity.y), ForceMode2D.Impulse);
-        //     cf.enabled = true;
-        //     Debug.Log ("In the snow");
-        // }
-        // else
-        // {
-        //     cf.enabled = false;
-        // }
-
         if (other.tag == "Ground")
         {
+            ground.enabled = true;
             // Sets player back to idle state booleans
             wb.sharedMaterial = normalMat;
             isFalling = false;
@@ -325,6 +327,13 @@ public class JumpKing : MonoBehaviour
         canMove = true;
         canJump = true;
         canFlip = true;
+    }
+
+    private IEnumerator destroyParticles()
+    {
+        yield return new WaitForSeconds (.25f);
+        Destroy(currentParticles);
+        canNewParticle = !canNewParticle;
     }
 
     // Rotates the sprite around to face the other direction
