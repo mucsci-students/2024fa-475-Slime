@@ -11,7 +11,7 @@ public class JumpKing : MonoBehaviour
     [SerializeField] private LayerMask iceGroundLayer;
     [SerializeField] private LayerMask iceSlopesLayer;
     [SerializeField] private float maxJumpValue = 17.5f;
-    [SerializeField] private float jumpIncreaseValue = 0.025f;
+    // [SerializeField] private float jumpIncreaseValue = 0.025f;
     [SerializeField] private float splatVelocityValue = -20f;
     [SerializeField] private float jumpResetDelay = 0.25f;
     [SerializeField] private float horizontalDistance = 6f;
@@ -60,7 +60,8 @@ public class JumpKing : MonoBehaviour
 
     // Particles
     public GameObject particleSpawn;
-    public GameObject currentParticles = null;
+    private GameObject currentParticles = null;
+    private bool canNewParticle = true;
 
 
     void Start()
@@ -96,7 +97,6 @@ public class JumpKing : MonoBehaviour
         new Vector2(0.45f, 0.2f), 0f, iceGroundLayer);
         isOnIceSlopes = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
         new Vector2(0.45f, 0.2f), 0f, iceSlopesLayer);
-        // anim.SetBool("isOnIce", isOnIceGround);
 
         //checks if grounded
         isGrounded = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.35f),
@@ -111,35 +111,29 @@ public class JumpKing : MonoBehaviour
                 {
                     rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                 }
-                if (Input.GetKey("space") && isGrounded)
+
+                if (Input.GetKey("space") && isGrounded && !stopJump)
                 {
                     rb.velocity = new Vector2 (0.0f, rb.velocity.y);
                     anim.SetBool("isRunning", false);
                     anim.SetTrigger("TriggerJump");
 
-                    // if (jumpValue == 0.0f)
-                    // {
-                    //     jumpValue += 2f;
-                    // }
                     if (jumpValue < maxJumpValue)
                     {
                         jumpValue += maxJumpValue * Time.deltaTime;
                     }
-
-                    // if (jumpValue == 0.0f)
-                    // {
-                    //     jumpValue += 2f;
-                    // }
-                    // else if (jumpValue < maxJumpValue)
-                    // {
-                    //     jumpValue += jumpIncreaseValue;
-                    // }
                 }
                 if (Input.GetKeyUp("space"))
                 {
+                    ground.enabled = false;
                     SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 1f);
-                    currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
-                    StartCoroutine(destroyParticles());
+                    if (canNewParticle)
+                    {
+                        canNewParticle = !canNewParticle;
+                        currentParticles = Instantiate(particleSpawn, transform.position, particleSpawn.transform.rotation);
+                        StartCoroutine(destroyParticles());
+                    }
+                    
                     isJumping = true;
                     if(isGrounded)
                     {
@@ -171,10 +165,10 @@ public class JumpKing : MonoBehaviour
             anim.SetTrigger("TriggerWallBounce");
             
         }
-        else
-        {
-            ground.enabled = true;
-        }
+        // else
+        // {
+        //     ground.enabled = true;
+        // }
 
         // Sets the Splat boolean to true if the player is falling at high speeds
         if (rb.velocity.y < splatVelocityValue)
@@ -240,7 +234,6 @@ public class JumpKing : MonoBehaviour
                             {
                                 canJump = false;
                             }  
-                            
                         }
                     }
                     
@@ -288,6 +281,7 @@ public class JumpKing : MonoBehaviour
     {
         if (other.tag == "Ground")
         {
+            ground.enabled = true;
             // Sets player back to idle state booleans
             wb.sharedMaterial = normalMat;
             isFalling = false;
@@ -339,6 +333,7 @@ public class JumpKing : MonoBehaviour
     {
         yield return new WaitForSeconds (.25f);
         Destroy(currentParticles);
+        canNewParticle = !canNewParticle;
     }
 
     // Rotates the sprite around to face the other direction
