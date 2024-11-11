@@ -8,6 +8,8 @@ public class MusicTrigger : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+        audioSource.Pause();
     }
 
     void OnTriggerEnter2D (Collider2D other)
