@@ -163,7 +163,6 @@ public class JumpKing : MonoBehaviour
         if (isWallBouncing)
         {
             anim.SetTrigger("TriggerWallBounce");
-            
         }
         // else
         // {
@@ -194,6 +193,7 @@ public class JumpKing : MonoBehaviour
 
         if (rb.velocity.y < -60f)
         {
+            wb.sharedMaterial = normalMat;
             ground.enabled = true;
         }
 
@@ -263,7 +263,6 @@ public class JumpKing : MonoBehaviour
                     if (canMove && isJumping)
                     {
                         rb.velocity = new Vector2(moveInput * horizontalDistance, rb.velocity.y);
-                        
                     }
                     else
                     {
