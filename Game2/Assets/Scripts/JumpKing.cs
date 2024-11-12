@@ -164,10 +164,10 @@ public class JumpKing : MonoBehaviour
         {
             anim.SetTrigger("TriggerWallBounce");
         }
-        // else
-        // {
-        //     ground.enabled = true;
-        // }
+        else
+        {
+            wb.sharedMaterial = normalMat;
+        }
 
         // Sets the Splat boolean to true if the player is falling at high speeds
         if (rb.velocity.y < splatVelocityValue)
@@ -204,11 +204,22 @@ public class JumpKing : MonoBehaviour
             cf.force = new Vector2(cf.force.x * -1, cf.force.y);
             cfTimer = 0.0f;
         }
+
+        //Sets wall bounciness
+        if (isGrounded || isFalling)
+        {
+            wb.sharedMaterial = normalMat;
+        }
+        else if (!isGrounded && isWallBouncing)
+        {
+            wb.sharedMaterial = bounceMat;
+        }
     }
 
     // Allows the character to move left, right, and jump, which restrics horizontal movement
     void FixedUpdate()
     {
+        //Sets wall bounciness
         if (isGrounded || isFalling)
         {
             wb.sharedMaterial = normalMat;
@@ -285,9 +296,9 @@ public class JumpKing : MonoBehaviour
     {
         if (other.tag == "Ground")
         {
-            ground.enabled = true;
             // Sets player back to idle state booleans
             wb.sharedMaterial = normalMat;
+            ground.enabled = true;
             isFalling = false;
             isJumping = false;
             isWallBouncing = false;            
