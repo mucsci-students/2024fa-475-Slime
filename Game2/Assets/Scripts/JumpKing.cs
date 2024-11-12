@@ -192,6 +192,11 @@ public class JumpKing : MonoBehaviour
             isFalling = true;
         }
 
+        if (rb.velocity.y < -60f)
+        {
+            ground.enabled = true;
+        }
+
         // Adds blizzard velocity force to player
         cfTimer += Time.deltaTime;
         if (cfTimer >= 5)
