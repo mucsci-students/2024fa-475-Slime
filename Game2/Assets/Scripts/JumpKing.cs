@@ -17,7 +17,7 @@ public class JumpKing : MonoBehaviour
     [SerializeField] private float horizontalDistance = 6f;
 
     // Non-Inputs
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Rigidbody2D wb;
     private Animator anim;
     public float walkSpeed = 3f;
@@ -190,6 +190,11 @@ public class JumpKing : MonoBehaviour
         if (!isGrounded && !isJumping && !isWallBouncing)
         {
             isFalling = true;
+        }
+
+        if (rb.velocity.y < -60f)
+        {
+            ground.enabled = true;
         }
 
         // Adds blizzard velocity force to player
