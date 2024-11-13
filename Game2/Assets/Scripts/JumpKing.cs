@@ -11,7 +11,6 @@ public class JumpKing : MonoBehaviour
     [SerializeField] private LayerMask iceGroundLayer;
     [SerializeField] private LayerMask iceSlopesLayer;
     [SerializeField] private float maxJumpValue = 17.5f;
-    // [SerializeField] private float jumpIncreaseValue = 0.025f;
     [SerializeField] private float splatVelocityValue = -20f;
     [SerializeField] private float jumpResetDelay = 0.25f;
     [SerializeField] private float horizontalDistance = 6f;
@@ -164,10 +163,6 @@ public class JumpKing : MonoBehaviour
         {
             anim.SetTrigger("TriggerWallBounce");
         }
-        // else
-        // {
-        //     wb.sharedMaterial = normalMat;
-        // }
 
         // Sets the Splat boolean to true if the player is falling at high speeds
         if (rb.velocity.y < splatVelocityValue)
