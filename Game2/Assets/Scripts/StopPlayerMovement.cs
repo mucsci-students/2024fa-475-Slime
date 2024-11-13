@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class StopPlayerMovement : MonoBehaviour
 {
+    [SerializeField] public AudioClip jumpSound;
+    [SerializeField] public AudioClip kissSound;
     public GameObject winMenu;
     public GameObject pauseMenu;
     public JumpKing playerScript;
@@ -14,6 +16,8 @@ public class StopPlayerMovement : MonoBehaviour
     private Animator anim;
     public GameObject targetPoint;
     private bool startTimer = false;
+    private bool canKiss = true;
+    private bool canJump = true;
     private float timer = 0.0f;
     
     void Start()
@@ -35,6 +39,12 @@ public class StopPlayerMovement : MonoBehaviour
             else if (timer >= 10)
             {
                 anim.SetTrigger("TriggerKiss");
+                if (canKiss && timer > 10.075)
+                {
+                    canKiss = !canKiss;
+                    SoundFXManager.instance.PlaySoundFXClip(kissSound, transform, 0.75f);
+                }
+                
             }
             else if (timer >= 5)
             {
@@ -47,6 +57,11 @@ public class StopPlayerMovement : MonoBehaviour
             else if (timer >= 2)
             {
                 anim.SetTrigger("TriggerJump");
+                if (canJump && timer > 2.1)
+                {
+                    canJump = !canJump;
+                    SoundFXManager.instance.PlaySoundFXClip(jumpSound, transform, 0.5f);
+                }
             }
 
             if (Mathf.Abs(princess.transform.position.x - targetPoint.transform.position.x) < 0.2f)
