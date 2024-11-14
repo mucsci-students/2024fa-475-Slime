@@ -8,7 +8,7 @@ public class Reposition : MonoBehaviour
     public PauseMenu pauseMenu;
     public void Position()
     {
-        player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + .4f, 0);
+        player.transform.position = new Vector3(player.transform.position.x + .05f, player.transform.position.y + .4f, 0);
         pauseMenu.ResumeGame();
     }
 }
