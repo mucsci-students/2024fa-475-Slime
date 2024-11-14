@@ -25,7 +25,7 @@ public class JumpKing : MonoBehaviour
     public bool isOnIceGround;
     public bool isOnIceSlopes;
     private bool canJump = true;
-    private bool canMove = true;
+    public bool canMove = true;
     private bool canFlip = true;
     public bool isJumping = false;
     private bool isWallBouncing = false;
